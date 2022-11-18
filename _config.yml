@@ -22,9 +22,10 @@ title: Kevin de Souza
 email: kevindesouza@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I am a data analyst working for the BC public service. I develop, deploy, 
-  and test tools to inform permitting and approval decision making for
+  and test tools to inform the permitting and approval process for
   regional and major mines in BC. 
-  I want to learn how to ride a horse.
+  I ride bikes, slide on snow, walk dogs, and occasionally publish my thoughts on the internet.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
