@@ -6,15 +6,8 @@ permalink: /about/
 
 ![Alt text](images/me.jpg)
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I am a data analyst working for the BC public service. I develop, deploy, 
+and test tools to inform the permitting and approval process for
+regional and major mines in BC. <br> I ride bikes, slide on snow, walk dogs, and occasionally publish my thoughts on the internet.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Check out my [linkedin]: https://www.linkedin.com/in/kevin-de-souza-558856127/
