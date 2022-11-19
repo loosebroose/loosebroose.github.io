@@ -20,8 +20,7 @@
 
 title: Kevin de Souza
 email: kevindesouza@protonmail.com
-description:  # this means to ignore newlines until "baseurl:"
-You know what a website is.. click around, have fun! Reach out if you want to collaborate!
+description: You know what a website is.. click around, have fun! Reach out if you want to collaborate!
   
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
