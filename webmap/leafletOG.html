@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+	
+	<title>Trails of the Kootenays</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    
+    <script src = "javascript/leaflet-providers.js"></script>
+
+    <script src="javascript/leaflet-ajax.js"></script>
+	
+    <style>
+		html, body {
+			height: 100%;
+			margin: auto;
+		}
+		.leaflet-container {
+			height: 800px;
+			width: 1000px;
+			margin: auto;
+			border: solid #000000;
+			border-width: 5px
+			/*max-width: 100%;
+			max-height: 100%; */
+		}
+		/* body{
+			background-image: url('images/IMG_1783.JPG');
+			background-size: cover;
+		} */
+		.main{color: #000000; text-align: center;}
+
+		
+	</style>
+
+	
+</head>
+<body>
+	<h1 class="main"> Trail map of the West Kootenays</h1>
+	<p class="main">A collection of the trails I hiked, biked and skied this past year</p>
+
+
+<div id="map" style="width: 1200px; height: 800px;"></div>
+<script>
+
+	var map = L.map('map').setView([49, -118], 8);
+
+  
+
+	var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(map);
+
+
+// Call 2 GeoJSON Layers to use on map
+
+    var PointJSON = "C:/Users/kevin/website/loosebroose.github.io/root/webmap/json/Points_FeaturesToJSON.json"
+
+	var trails = "C:/Users/kevin/website/loosebroose.github.io/root/webmap/json/Trails.json"
+
+
+    var Icon = L.icon({
+        iconUrl: "C:/Users/kevin/website/loosebroose.github.io/root/webmap/svg/trails.svg",
+        iconSize: [20, 20]
+    });
+
+
+// Popups for each trailhead
+    var PointLayer = new L.GeoJSON.AJAX(PointJSON, {
+        onEachFeature: popupFunction,
+        pointToLayer: pointLayerFunction
+    });
+
+
+	var trailLayer = new L.GeoJSON.AJAX(trails, {
+		style: TrailStyle
+	});
+
+// Popup Template 
+    function popupFunction(feature, layer) {
+        var popContent = `<p style = "background-color: rgb(113, 149, 248);
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 115%;
+        ">${feature.properties.Name}</p>
+        <img src= ${feature.properties.Image} width=200px>
+
+            <br>
+            <table style="background-color: rgb(113, 149, 248); border-color: rgb(8, 8, 0);font-family: Arial, Helvetica, sans-serif; width:220px">
+                <tr>
+                    <td style = "font-weight: bold">Type of Use:</td>
+                    <td>${feature.properties.ActivityType}</td>
+                </tr>
+                <tr>
+					<td style = "font-weight: bold">Limitations:</td>
+                    <td>${feature.properties.Limitations}</td>
+                </tr>
+                <tr>
+					<td style = "font-weight: bold">Season:</td>
+                    <td>${feature.properties.Season}</td>
+                </tr>
+            </table>
+            <br>` ;
+        layer.bindPopup(popContent, {
+            maxWidth: "auto"
+        });
+    };
+
+// Symbolize Trails 
+	function TrailStyle(feature) {
+		var colourToUse;
+		var line = feature.properties.Name;
+
+        colourToUse=TrailColour(line);
+
+		return {
+			"color": colourToUse,
+			"weight": 5
+		};
+	};
+
+    function TrailColour(trailName) {
+		if (trailName == "Cornice Ridge") colourToUse = "#e41a1c";
+		else if (trailName == "ARIC to Dove Hill") colourToUse = "#377eb8";
+		else if (trailName == "Evening Peak") colourToUse = "#4daf4a";
+		else if (trailName == "Lepsoe Cabin") colourToUse = "#00ffff";
+		else if (trailName == "Mel De Anna") colourToUse = "#ff7f00";
+		else if (trailName == "Ripple Ridge") colourToUse = "#ffff33";
+		else if (trailName == "Seven Summits") colourToUse = '#a65628';
+		else if (trailName == "Twin Peaks") colourToUse = '#f781bf';
+		else colourToUse = "#6a3d9a";
+
+		return colourToUse
+	};
+
+
+    function pointLayerFunction(feature, latlng) {
+        var marker = L.marker(latlng, {
+            icon: Icon
+        });
+        return marker;
+    };
+
+// Make a legend
+	var legend = L.control({position: "bottomleft"});
+    legend.onAdd = function (map) {
+
+	var div = L.DomUtil.create('div', 'info legend');
+	labels = ['<strong>categories</strong>'],
+	categories = ['Cornice Ridge','ARIC to Dove Hill','Evening Peak','Lepsoe Cabin','Mel De Anna', 'Ripple Ridge', 'Seven Summits', 'Twin Peaks', 'Ymir Trails'];
+
+	for (var i = 0; i < categories.length; i++) {
+
+			div.innerHTML += '<p style="background-color:'+TrailColour(categories[i])+';">'+categories[i]+'</p>'
+		}
+
+	return div;
+	};
+
+// add it all to the map
+	legend.addTo(map);
+	trailLayer.addTo(map);
+    PointLayer.addTo(map);
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [
+    {
+      "type" : "Feature",
+      "id" : 1,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.04052799999994,
+          49.058617000000027
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 1,
+        "FID" : 1,
+        "Lat" : 49.058616999999998,
+        "Long" : -117.04052799999999,
+        "Name" : "Cornice Ridge, Ripple Ridge",
+        "ActivityType" : "Ski, hike",
+        "Limitations" : "Dogs Prohibited ",
+        "Season" : "Winter, Summer"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 2,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.20723499999997,
+          49.296137000000044
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 2,
+        "FID" : 2,
+        "Lat" : 49.296137000000002,
+        "Long" : -117.207235,
+        "Name" : "Ymir Trails",
+        "ActivityType" : "Hike",
+        "Limitations" : "Dogs Allowed",
+        "Season" : "Year Round"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 3,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.63654199999996,
+          49.298411000000044
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 3,
+        "FID" : 3,
+        "Lat" : 49.298411000000002,
+        "Long" : -117.63654200000001,
+        "Name" : "ARIC to Dove Hill Loop",
+        "ActivityType" : "Hike, Bike",
+        "Limitations" : "Dogs on Leash",
+        "Season" : "Year Round"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 4,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.63647099999997,
+          49.24859500000008
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 4,
+        "FID" : 4,
+        "Lat" : 49.248595000000002,
+        "Long" : -117.636471,
+        "Name" : "Mel DeAnna",
+        "ActivityType" : "Hike",
+        "Limitations" : "Dogs Allowed",
+        "Season" : "Year Round"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 5,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.84640399999995,
+          49.026852000000076
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 5,
+        "FID" : 5,
+        "Lat" : 49.026851999999998,
+        "Long" : -117.84640400000001,
+        "Name" : "Seven Summits Terminus",
+        "ActivityType" : "Hike, Bike, Ski",
+        "Limitations" : "Dogs Allowed",
+        "Season" : "Year Round"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 6,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.49387999999999,
+          49.316877000000034
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 6,
+        "FID" : 6,
+        "Lat" : 49.316876999999998,
+        "Long" : -117.49388,
+        "Name" : "Twin Peaks",
+        "ActivityType" : "Hike",
+        "Limitations" : "Dogs Allowed",
+        "Season" : "Summer, Fall"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 7,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.89645099999996,
+          49.203326000000061
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 7,
+        "FID" : 7,
+        "Lat" : 49.203325999999997,
+        "Long" : -117.896451,
+        "Name" : "Lepsoe Cabin, Seven Summits Star",
+        "ActivityType" : "Hike, Bike, Ski",
+        "Limitations" : "Dogs Allowed",
+        "Season" : "Year Round"
+      }
+    },
+    {
+      "type" : "Feature",
+      "id" : 8,
+      "geometry" : {
+        "type" : "Point",
+        "coordinates" : [
+          -117.17980699999998,
+          49.443739000000051
+        ]
+      },
+      "properties" : {
+        "OBJECTID" : 8,
+        "FID" : 8,
+        "Lat" : 49.443739000000001,
+        "Long" : -117.179807,
+        "Name" : "Evening Peak",
+        "ActivityType" : "Hike, Ski",
+        "Limitations" : "Dogs Prohibited ",
+        "Season" : "Summer, Winter"
+      }
+    }
+  ]
+}
