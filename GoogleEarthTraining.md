@@ -3,7 +3,7 @@ layout: page
 title: Google Earth Training
 permalink: /training/
 ---
-https://www2.gov.bc.ca/gov/content/data/geographic-data-services
+[Data Service](https://www2.gov.bc.ca/gov/content/data/geographic-data-services)
 
 ---
 
@@ -69,7 +69,7 @@ https://www2.gov.bc.ca/gov/content/data/geographic-data-services
 - > **Front Counter BC Discovery Tool**
     - The FCBC Discovery tool is used within GE Pro to view basic information pertaining to land use and ownership in British Columbia 
     - The tool allows users to view, and create areas of interest that can aid in the approval process for work applications within the province. 
-    - There is a detailed tutorial at [[The Front Counter BC Discovery Tool Web Page | https://portal.nrs.gov.bc.ca/web/client/-/frontcounter-bc-discovery-tool]]
+    - There is a detailed tutorial at [The Front Counter BC Discovery Tool Web Page](https://portal.nrs.gov.bc.ca/web/client/-/frontcounter-bc-discovery-tool)
         - NOTE: this tool will not show ALL land use types, and it constraints - therefore it is just one of the many tool employees can use to assess the likelihood of application approval
 
 
@@ -81,7 +81,7 @@ https://www2.gov.bc.ca/gov/content/data/geographic-data-services
     - They a KML of a specific layer is stored on a network drive, or a website so that users from within and outside of organizations are able to access and view this information in Google Earth.
     - Because KML network link to the BC WebMap Library are stored on a website or network drive the information can be updated and delivered to end-users so that up to date data can be displayed without the user needing to seek updates themselves.  
     - The KML Network link to the BC Web Map Library can be found here:
-        - [[BC Web Map Library | https://openmaps.gov.bc.ca/kml/geo/BCGov_Web_Map_Library.kml]]
+        - [BC Web Map Library](https://openmaps.gov.bc.ca/kml/geo/BCGov_Web_Map_Library.kml)
 - > **Through the BC Data Catalogue:**
     - Search Catalogue for 'BC Web Map Library' - these are the iMap BC layers, this is the layer library that contains layers for:
         - Administrative Boundary, Fish and Wildlife, Archaeology and Cultural, imagery, health, land ownership and staus etc..
@@ -90,18 +90,18 @@ https://www2.gov.bc.ca/gov/content/data/geographic-data-services
     - Once opened in GE, move the network link to 'My Places' so that the network link will persist in Google Earth after you end your session.
         - Be patient when viewing the data, there is a ton of information being hosted here, it will take time to load and visualize layers. Take your time, and select the layers that are useful to you and they will eventually load.
         - Pop-ups are available to be viewed when features are selected. These popups give information about the layer that can be useful to MCAD/MHSED employees.
-    - Using the [[BC Web Map Library | https://openmaps.gov.bc.ca/kml/geo/BCGov_Web_Map_Library.kml]] link, you can directly import the webmap library
+    - Using the [BC Web Map Library](https://openmaps.gov.bc.ca/kml/geo/BCGov_Web_Map_Library.kml) link, you can directly import the webmap library
         - This link can be accessed from the BC Data Catalogue, in the BC Web Map Library
         - Select 'View' on the Resource 'KML with GroundOverlays for use in Google Earth' and copy the Resource Link
         - In GE: right-click 'My Places' and select 'Add', then 'Network Link', in the description section select 'Add Link..'
             - Paste the copied link in this section, give your layer a relevant name and confirm your action.
         - The BC Web Map Library will then be available to be view in GE Pro
 - > **Importing Data through a CSV from EMLI Inspection Mapper**:
-    - In [[Metabase | https://metabase-4c2ba9-prod.apps.silver.devops.gov.bc.ca/]]
+    - In [Metabase](https://metabase-4c2ba9-prod.apps.silver.devops.gov.bc.ca/)
         - Navigate to the dashboard or table that you are interested in, in this case we will use the public dataset and navigate to the Now Application table. This table contains information pertaining to application types, permit terms, latitude, longitude, and other relevant mine details. But there is a lot of data in here we wont need.
             - Select the Table, and in the bottom left of the screen select 'Settings'. In this dialogue, we are able to rearrange columns, and eliminate data that we are not interested in. Filter your data appropriately.
             - In the Bottom Right corner select the cloud icon and specificy the format you would like to download the table in. In our case we will select '.csv'
-    - In the [[EMLI Inspection Mapper | https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=f024193c07a04a28b678170e1e2046f6#]] users can toggle layer and view a variety of mine related data. In the bottom toolbar select 'Tools' > 'Select Features'
+    - In the [EMLI Inspection Mapper](https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=f024193c07a04a28b678170e1e2046f6#) users can toggle layer and view a variety of mine related data. In the bottom toolbar select 'Tools' > 'Select Features'
         - Make the layers you are interested in the only selectable layers, then using the selection drop-down menu select the shape you want to draw to capture all the data you are interested in. In this scenereo we will use the lasso tool. 
         - Draw your AOI and click on the three dots beside the layer you are interested in, select 'Export to CSV file'. You know have a CSV full of the attribute data associated with each NoW point within your AOI. Now let's load it into GE pro
     - Google Earth can handle several different file formats, including a CSV (Comma Seperated Value) that contains spatial information.
