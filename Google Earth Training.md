@@ -1,9 +1,7 @@
 ---
-id: oonirnwp9zre5g5ah7sho0f
+layout: page
 title: Google Earth Training
-desc: ''
-updated: 1666305493063
-created: 1666305493063
+permalink: /training/
 ---
 https://www2.gov.bc.ca/gov/content/data/geographic-data-services
 
