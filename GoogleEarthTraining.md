@@ -38,11 +38,11 @@ permalink: /training/
         - Implement the BC Address Geocoder
 
 ## Useful Tools Available to us in GE Pro
-- > **Measurements and Elevation Transects**
+- > **Measurements**
     - Taking measurements in GE is a fairly simple process that can give users rough estimations of distance. For example: this tool can be used by inspectors to gauge areas of reclamation or disturbance at a mine site so that potential non-compliance can be flagged and investigated. 
     - > To do this open GE Pro and in the menu bar select 'Tools' > 'Ruler', in the bottom left select 'Mouse Navigation'. <br>
     In the Ruler dialogue, the user can shoose to make measurements using lines, paths, circles, polygons as well as 3D objects. The units of measurements can be changed within this dialogue box to suite the user's need. 
-    - A useful tool available in GE Pro is the ability to view the elevation profile along a defined path or line. This can be used to get rough estimations of grade
+    <!-- - A useful tool available in GE Pro is the ability to view the elevation profile along a defined path or line. This can be used to get rough estimations of grade -->
 
 - > **Elevation Exaggeration**
     - Google Earth allows the user to exaggerate topography display so that the user can better visualize features on the Earth's surface.
@@ -65,6 +65,11 @@ permalink: /training/
     - In GE users have the ability to toggle through historical sattelite imagery. This feature can be useful when determining scope of disturbance at sites of interest. Using the polygon for the Red Chris Mine, we can toggle through vintages of imagery to view how the site has changed over time. 
     - In the map menu bar: select the clock icon - a slider then appears and the user can navigate using the slider to the desired year
         - NOTE: Consistent sattellite imagery may not be available in some locations, and the resolution of the imagery can be poor.
+    - Loading ESRI world imagery basemaps to GE Pro:
+        - Navigate to [ArcGIS REST Services Directory](https://services.arcgisonline.com/arcgis/rest/services)
+        - Select the service you would like access to, in this case we will choose world imagery
+        - This will open up a new tab for us where we can get access to the map server for the world imagery layer. In the 'View in' section select ArcGIS Earth
+            - A KMZ will be downloaded and can be loaded into GE pro where it can e stored in 'Mt Places' section on your places tab
 
 - > **Front Counter BC Discovery Tool**
     - The FCBC Discovery tool is used within GE Pro to view basic information pertaining to land use and ownership in British Columbia 
