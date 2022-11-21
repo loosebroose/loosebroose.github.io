@@ -3,7 +3,7 @@ layout: page
 title: Google Earth Training
 permalink: /training/
 ---
-[Data ServiceS](https://www2.gov.bc.ca/gov/content/data/geographic-data-services)
+[Data Services](https://www2.gov.bc.ca/gov/content/data/geographic-data-services)
 
 ---
 
