@@ -3,7 +3,7 @@ layout: page
 title: Google Earth Training
 permalink: /training/
 ---
-[Data Service](https://www2.gov.bc.ca/gov/content/data/geographic-data-services)
+[Data ServiceS](https://www2.gov.bc.ca/gov/content/data/geographic-data-services)
 
 ---
 
@@ -82,6 +82,8 @@ permalink: /training/
     - Because KML network link to the BC WebMap Library are stored on a website or network drive the information can be updated and delivered to end-users so that up to date data can be displayed without the user needing to seek updates themselves.  
     - The KML Network link to the BC Web Map Library can be found here:
         - [BC Web Map Library](https://openmaps.gov.bc.ca/kml/geo/BCGov_Web_Map_Library.kml)
+
+
 - > **Through the BC Data Catalogue:**
     - Search Catalogue for 'BC Web Map Library' - these are the iMap BC layers, this is the layer library that contains layers for:
         - Administrative Boundary, Fish and Wildlife, Archaeology and Cultural, imagery, health, land ownership and staus etc..
@@ -96,6 +98,8 @@ permalink: /training/
         - In GE: right-click 'My Places' and select 'Add', then 'Network Link', in the description section select 'Add Link..'
             - Paste the copied link in this section, give your layer a relevant name and confirm your action.
         - The BC Web Map Library will then be available to be view in GE Pro
+
+
 - > **Importing Data through a CSV from EMLI Inspection Mapper**:
     - In [Metabase](https://metabase-4c2ba9-prod.apps.silver.devops.gov.bc.ca/)
         - Navigate to the dashboard or table that you are interested in, in this case we will use the public dataset and navigate to the Now Application table. This table contains information pertaining to application types, permit terms, latitude, longitude, and other relevant mine details. But there is a lot of data in here we wont need.
