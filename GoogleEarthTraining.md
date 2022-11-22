@@ -31,11 +31,10 @@ permalink: /training/
 ## Introduction:
 - > Google Earth Pro is a powerful tool that can be leveraged by government employees to quickly view, and distribute spatial data from BC government data services without navigating complicated GIS software in the DTS environment
     - In this presentation we are going to run through how to:
-        - import layer libraries through KML network links and CSVs into Google Earth, as well as some other useful tools provided by the service.
+        - import layer libraries through KML network links and CSVs into Google Earth
         - View government data on google earth through using KML Network Links obtained from the BC Data Catalogue
-        - Export data using the Geomark Web Service - through utilizing JSON and KMZ file types
-        - Utilize Digital Imagery of BC to assess 
-        - Implement the BC Address Geocoder
+        - Utilize other useful tools provided by the service such as measurements, elevation exaggeration, and elevation profiles
+
 
 ## Useful Tools Available to us in GE Pro
 - > **Measurements**
