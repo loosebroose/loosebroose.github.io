@@ -105,7 +105,9 @@ permalink: /maps/
         });
 
         const Gwaii = L.marker([54.04, -131.88]).addTo(map)
-		.bindPopup('<h1 class = head>Haida Gwaii</h1><br />I lived in a shack on the beach for a year and I will be forever grateful for that');
+		.bindPopup('<h1 class = head>Haida Gwaii</h1>'+
+        '<br /><form action="https://gohaidagwaii.ca/"><button type="submit" class="container"></button>'+
+        '<br />I lived in a shack on the beach for a year and I will be forever grateful for that');
 
         const arrow = L.marker([48.173, -90.138]).addTo(map)
         .bindPopup("<h1 class = head> My uncle's camp on Arrow Lake</h1><br /><img src ="+ placemark +"width = 200px; height = 200px; justify-content: center/><br /><b class = head>Many good days spent chopping wood, and reading in the sunshine</b>");
