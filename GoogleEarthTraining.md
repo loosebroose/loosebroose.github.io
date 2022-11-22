@@ -33,15 +33,14 @@ permalink: /training/
     - In this presentation we are going to run through how to:
         - import layer libraries through KML network links and CSVs into Google Earth
         - View government data on google earth through using KML Network Links obtained from the BC Data Catalogue
-        - Utilize other useful tools provided by the service such as measurements, elevation exaggeration, and elevation profiles
+        - Utilize other useful tools such as measurements, elevation exaggeration, elevation profiles, historical imagery, and ESRI basemaps
 
 
 ## Useful Tools Available to us in GE Pro
 - > **Measurements**
     - Taking measurements in GE is a fairly simple process that can give users rough estimations of distance. For example: this tool can be used by inspectors to gauge areas of reclamation or disturbance at a mine site so that potential non-compliance can be flagged and investigated. 
     - > To do this open GE Pro and in the menu bar select 'Tools' > 'Ruler', in the bottom left select 'Mouse Navigation'. <br>
-    In the Ruler dialogue, the user can shoose to make measurements using lines, paths, circles, polygons as well as 3D objects. The units of measurements can be changed within this dialogue box to suite the user's need. 
-    <!-- - A useful tool available in GE Pro is the ability to view the elevation profile along a defined path or line. This can be used to get rough estimations of grade -->
+    In the Ruler dialogue, the user can choose to make measurements using lines, paths, circles, polygons as well as 3D objects. The units of measurements can be changed within this dialogue box to suite the user's need. 
 
 - > **Elevation Exaggeration**
     - Google Earth allows the user to exaggerate topography display so that the user can better visualize features on the Earth's surface.
@@ -58,17 +57,19 @@ permalink: /training/
     - To veiw an elevation profile:
         - in the top menu of the Google Earth map view, select 'New Path', in the resulting dialogue box give your path a name and zoom into your area of interest - in this case we will look at a major mine, and take an elevation profile of a road they have marked as a disturbance area.
             - Once the path has been defined, it appears in the 'Temporary Places' section of our ToC. Right click on this layer, and select show elevation profile. 
-            - The profile shows the user the Min, Average, and Maximum elevation units, the elevation gain or loss through that path, the path's distance, and the max slope, and average slope. All measurements can be valuable when estimating the type and scope of disturbance.
+            - The profile shows the user the Min, Average, and Maximum elevation units, the elevation gain or loss through that path, the path's distance, and the max slope, and average slope. These measurements can be valuable when estimating the type and scope of disturbance.
 
 - > **Viewing Historical Imagery**
     - In GE users have the ability to toggle through historical sattelite imagery. This feature can be useful when determining scope of disturbance at sites of interest. Using the polygon for the Red Chris Mine, we can toggle through vintages of imagery to view how the site has changed over time. 
     - In the map menu bar: select the clock icon - a slider then appears and the user can navigate using the slider to the desired year
-        - NOTE: Consistent sattellite imagery may not be available in some locations, and the resolution of the imagery can be poor.
+        - Adjusting zoom levels will provide the user with more or less imagery depending on the resolution
+        - NOTE: Consistent sattellite imagery may not be available in some locations, and the resolution of the imagery can be poor. Remote mine sites will likely have less valuable satellite imagery overlaying them, whereas sand and gravel sites closer to urban areas will likely have more useful image overlays.
     - Loading ESRI world imagery basemaps to GE Pro:
         - Navigate to [ArcGIS REST Services Directory](https://services.arcgisonline.com/arcgis/rest/services)
         - Select the service you would like access to, in this case we will choose world imagery
         - This will open up a new tab for us where we can get access to the map server for the world imagery layer. In the 'View in' section select ArcGIS Earth
-            - A KMZ will be downloaded and can be loaded into GE pro where it can e stored in 'Mt Places' section on your places tab
+            - A KMZ will be downloaded and can be loaded into GE pro where it can be stored in 'My Places' section on your places tab
+    - ESRI basemaps can be used to supplement the basemaps available to us in GE pro, while we will not have the flexibility of toggling through historical imagery, we can leverage ESRI basemaps to obtain better resolution and ground coverage.
 
 - > **Front Counter BC Discovery Tool**
     - The FCBC Discovery tool is used within GE Pro to view basic information pertaining to land use and ownership in British Columbia 
@@ -82,8 +83,8 @@ permalink: /training/
 - > **What is a KML Network Link?**
     - Keyhole Markup Language (KML) is a file format used to display spatial data in the Google Earth Environments
     - A KML Network Link uses a KMZ (a zipped version of a KML) to display and share complex spatial data.
-    - They a KML of a specific layer is stored on a network drive, or a website so that users from within and outside of organizations are able to access and view this information in Google Earth.
-    - Because KML network link to the BC WebMap Library are stored on a website or network drive the information can be updated and delivered to end-users so that up to date data can be displayed without the user needing to seek updates themselves.  
+    - A KML of a specific layer is stored on a network drive, or a website so that users from within and outside of organizations are able to access and view this information in Google Earth.
+    - Hosting spatial data on a KML network link allows information to be updated and delivered to end-users so that up to date data can be displayed without the user needing to seek updates themselves.  
     - The KML Network link to the BC Web Map Library can be found here:
         - [BC Web Map Library](https://openmaps.gov.bc.ca/kml/geo/BCGov_Web_Map_Library.kml)
 
