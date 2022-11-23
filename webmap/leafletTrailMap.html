@@ -127,6 +127,12 @@ permalink: /maps/
 
         const arrow = L.marker([48.173, -90.138]).addTo(map)
         .bindPopup("<h1 class = head> My uncle's camp on Arrow Lake</h1><br /><img src ="+ placemark +"width = 200px; height = 200px; justify-content: center/><br /><b class = head>Many good days spent chopping wood, and reading in the sunshine</b>");
+        
+        const iceland = L.marker([63.936, -16.919]).addTo(map)
+        .bindPopup('<h1 class = head>Iceland</h1>'+
+        '<br /><form action="https://guidetoiceland.is/connect-with-locals/regina/reykjadalur-hot-spring-valley-in-south-iceland"><button type="submit" class="popupbutton">The hotspring river was a favourite!</button>'+
+        '<br />In 2017 a friend and I rented a car and drove around Iceland for a month. We soaked in hotsprings, sampled the local cuisine (hotdogs), and slept in our tents through insane wind storms. It was cold!');
+
 
         // const popup = L.popup()
 		// .setLatLng([51.513, -0.09])
