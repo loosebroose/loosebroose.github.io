@@ -3,14 +3,13 @@ layout: page
 title: Resume
 permalink: /Resume/
 ---
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Title of the document</title>
+    <title>CV</title>
   </head>
   <body>
-    <h1>PDF Example</h1>
-    <p>Check out my Resume <a href="/cv/KevindeSouza_13Nov2022.pdf">example</a>.</p>
+    <h1>Take a look at my resume</h1>
+    <p><a href="/cv/KevindeSouza_13Nov2022.pdf">View the PDF here</a>.</p>
   </body>
 </html>
 
