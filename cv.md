@@ -10,6 +10,8 @@ permalink: /Resume/
   </head>
   <body>
     <h1>PDF Example</h1>
-    <p>Open a PDF file <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">example</a>.</p>
+    <p>Check out my Resume <a href="/cv/KevindeSouza_13Nov2022.pdf">example</a>.</p>
   </body>
 </html
+
+![Alt text](cv/cv.png)
