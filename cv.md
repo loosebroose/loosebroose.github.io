@@ -12,6 +12,6 @@ permalink: /Resume/
     <h1>PDF Example</h1>
     <p>Check out my Resume <a href="/cv/KevindeSouza_13Nov2022.pdf">example</a>.</p>
   </body>
-</html
+</html>
 
 ![Alt text](cv/cv.png)
