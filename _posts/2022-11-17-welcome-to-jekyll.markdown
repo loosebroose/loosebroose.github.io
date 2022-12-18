@@ -1,29 +1,13 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2022-11-17 21:48:28 -0800
+title:  "Why a website?"
+date:   2022-12-17 21:48:28 -0800
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+I am a geospatial professional that is looking to expand his work and knowledge of all things GIS. I am a dreamer, builder, and problem solver - the things in my life that give me the greatest joys are those that challenge me. When I realized this about myself I decided that continual growth meant continual challenge, it meant embracing things that bring me outside of my comfort zone. 
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Prior to my GIS career I ran tree planting crews accross British Columbia. I started planting trees when I was 18, in 2014 - it was a big challenge, it was my hippy dream, most importantly it got me out of my parents house. There was a time in my life where I thought tree planting was the career I would follow for the rest of my life. It taught me so much about myself, the job pushed me to be a leader within my community. It showed me that I was capable, tough, and cool in the face of adversity. When I began running crews I felt proud of what I had accomplished. The job was intense, I often worked 16 hour days, and was racked with anxiety and guilt about my performance. But, at the end of every work day I felt good, I slept well, and I really enjoyed being a leader for the people I worked with. Choosing to follow a different path, and retrain to break into the world of GIS was a difficult decision, but I am so glad I made it. I will always think fondly of my many days spent working hard in the cut blocks, I will always remember sharing beers with friends after the work ended. I hope to soon forget the days spent riding quads in the pouring rain, or the mornings spent sipping crappy coffee from an old thrift shop thermos as mosquitos buzz in my ear. 
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Welcome to my blog, I hope you read it! 
