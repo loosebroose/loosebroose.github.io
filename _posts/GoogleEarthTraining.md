@@ -2,7 +2,7 @@
 layout: post
 title:  "Why a website?"
 date:   2022-12-19
-categories: training
+categories: jekyll update
 ---
 
 ## Introduction:
