@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Google Earth Training
-permalink: /training/
+title:  "Why a website?"
+date:   2022-12-19
+categories: training
 ---
 
 ## Introduction:
