@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Google Earth Training
 permalink: /training/
 ---
