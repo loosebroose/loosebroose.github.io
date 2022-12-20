@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why a website?"
+title:  "Google Earth Training"
 date:   2022-12-19
 categories: jekyll update
 ---

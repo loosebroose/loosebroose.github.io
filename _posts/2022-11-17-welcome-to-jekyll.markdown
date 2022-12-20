@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why a website?"
+title:  "Some thoughts on a Sunday"
 date:   2022-12-17 21:48:28 -0800
 categories: jekyll update
 ---
