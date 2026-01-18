@@ -1,9 +1,3 @@
----
-layout: post
-title:  "Google Earth Training"
-date:   2022-12-19
-categories: jekyll update
----
 
 ## Introduction:
 - > Google Earth Pro is a powerful tool that can be leveraged by government employees to quickly view, and distribute spatial data from BC government data services without navigating complicated GIS software in the DTS environment
