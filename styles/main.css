@@ -15,7 +15,7 @@ body {
   align-items: center;
   text-align: center;
 
-  background: url('images/dog.jpg') no-repeat center/cover;
+  background: url('../images/dog.jpg') no-repeat center/cover;
 }
 
 /* Dark overlay */
