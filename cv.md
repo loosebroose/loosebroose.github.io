@@ -1,8 +1,4 @@
----
-layout: page
-title: Resume
-permalink: /Resume/
----
+
 <html>
   <head>
     <title>CV</title>
