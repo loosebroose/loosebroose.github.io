@@ -1,9 +1,4 @@
----
-layout: post
-title:  "Some thoughts on a Sunday"
-date:   2022-12-17 21:48:28 -0800
-categories: jekyll update
----
+
 
 I am a geospatial professional that is looking to expand his work and knowledge of all things GIS. I am a dreamer, builder, and problem solver - the things in my life that give me the greatest joys are those that challenge me. When I realized this about myself I decided that continual growth meant continual challenge, it meant embracing things that bring me outside of my comfort zone. 
 
