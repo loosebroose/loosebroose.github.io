@@ -3,6 +3,9 @@
    Concept 1: Ultra-Minimal
    --------------------------- */
 
+body { background: hotpink !important; }
+``
+
 :root {
   --bg: #f6f7f9;               /* clean light gray */
   --text: #0f172a;             /* slate/near-black */
