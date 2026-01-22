@@ -1,80 +1,135 @@
 
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  background: #000;
-  color: #fff;
+/* ---------------------------
+   Concept 1: Ultra-Minimal
+   --------------------------- */
+
+:root {
+  --bg: #f6f7f9;               /* clean light gray */
+  --text: #0f172a;             /* slate/near-black */
+  --muted: rgba(15, 23, 42, 0.68);
+  --card: rgba(255, 255, 255, 0.72);
+  --border: rgba(15, 23, 42, 0.10);
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+  --radius: 18px;
+  --radius-pill: 999px;
+
+  --maxw: 960px;
+  --pad: clamp(16px, 3vw, 28px);
 }
 
-/* Hero Section */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Section (now acts like a centered "card" on a light page) */
 .hero {
-  position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  background: url('../images/ski.jpg') no-repeat center/cover;
+  /* The outer page padding creates the minimalist frame */
+  padding: clamp(28px, 6vw, 72px) var(--pad);
+  box-sizing: border-box;
+
+  /* Remove black page feel */
+  background: var(--bg);
 }
 
-/* Dark overlay */
+/* Replace the old full-bleed background image with a contained hero surface.
+   We keep your background image but place it on a "panel" created by overlay + content. */
 .hero-overlay {
+  /* Instead of covering whole viewport with dark overlay,
+     this creates a subtle "panel" behind the content. */
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: transparent;
 }
 
-/* Content */
+/* Content becomes the hero "card" */
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  padding: 20px;
+  width: min(var(--maxw), 100%);
+  padding: clamp(18px, 3.5vw, 34px);
+  box-sizing: border-box;
+
+  /* The card surface */
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+
+  /* Add your image as a subtle header background inside the card */
+  overflow: hidden;
 }
 
+/* Create an image header area inside the card without changing HTML
+   by using a pseudo-element on .hero-content */
+.hero-content::before {
+  content: "";
+  display: block;
+  height: clamp(180px, 26vw, 280px);
+  margin: calc(-1 * clamp(18px, 3.5vw, 34px));
+  margin-bottom: clamp(14px, 2.5vw, 20px);
+
+  background: url('../images/ski.jpg') no-repeat center/cover;
+  filter: saturate(0.95) contrast(1.05) brightness(0.92);
+}
+
+/* Soft gradient for text readability over the image header */
+.hero-content::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: clamp(180px, 26vw, 280px);
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.00) 60%
+  );
+  pointer-events: none;
+}
+
+/* Label */
 .hero-label {
-  font-size: 1.1rem;
-  opacity: 0.8;
-  margin-bottom: 10px;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 12px;
 }
 
+/* Title (smaller, more editorial than poster-sized) */
 .hero-title {
-  font-size: 4rem;
-  line-height: 1.1;
+  font-size: clamp(2.0rem, 4.2vw, 3.1rem);
+  line-height: 1.12;
   font-weight: 700;
-  margin: 0 0 30px;
+  margin: 0 0 18px;
+  color: var(--text);
 }
 
+/* Optional: if you have a short subtitle paragraph in HTML later,
+   it will inherit a nicer style */
+.hero-content p {
+  margin: 0 auto 18px;
+  max-width: 56ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* Primary button: rounded, minimalist, subtle shadow */
 .hero-btn {
   display: inline-block;
-  padding: 14px 32px;
-  background: #fff;
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-bottom: 40px;
-}
-
-/* Bottom pill menu */
-.hero-menu {
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(12px);
-  padding: 14px 28px;
-  border-radius: 40px;
-  display: inline-flex;
-  gap: 30px;
-}
-
-.hero-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.hero-menu a:hover {
-  opacity: 1;
-}
+  padding: 12px 18px;
