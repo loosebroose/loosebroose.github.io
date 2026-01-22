@@ -27,9 +27,11 @@ body {
   width: 100%;
 
   display: flex;
-  align-items: center;
   justify-content: center;
   text-align: center;
+
+   align-items: flex-end;
+   padding-bottom: clamp(70px, 12vh, 140px);
 
   background: url("../images/ski.jpg") no-repeat center center / cover;
 }
