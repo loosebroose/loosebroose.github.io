@@ -107,3 +107,84 @@ body {
     padding: 12px 20px;
   }
 }
+
+
+/* ============================
+   Scroll-snap Photo Story
+   ============================ */
+
+.story{
+  height: 100vh;
+  overflow-y: auto;
+
+  /* snap behavior */
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  /* nice on iOS */
+  -webkit-overflow-scrolling: touch;
+
+  /* optional: remove scroll chaining */
+  overscroll-behavior: contain;
+}
+
+/* each slide fills the screen */
+.story-slide{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  /* background image via CSS variable */
+  background: var(--img) no-repeat center / cover;
+}
+
+/* readability gradient */
+.story-slide::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.20) 55%,
+    rgba(0,0,0,0.65)
+  );
+}
+
+/* caption positioning */
+.story-caption{
+  position: absolute;
+  left: clamp(16px, 4vw, 56px);
+  bottom: clamp(22px, 7vh, 70px);
+  z-index: 1;
+
+  max-width: min(640px, 92vw);
+  color: #fff;
+}
+
+.story-caption h2{
+  margin: 0 0 8px;
+  font-size: clamp(1.4rem, 2.6vw, 2.0rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.story-caption p{
+  margin: 0;
+  opacity: 0.88;
+  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  line-height: 1.55;
+}
+
+/* optional: subtle divider between hero and story */
+.hero + .story{
+  border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+/* prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .story{ scroll-behavior: auto; }
+}
+
