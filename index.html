@@ -1,67 +1,47 @@
 ---
 layout: null
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark" />
-
   <link rel="stylesheet" href="/styles/main.css?v=11">
   <title>Kevin de Souza</title>
 </head>
 
 <body>
-  <!-- HERO (snap section 1) -->
-  <section class="hero snap" aria-label="Homepage hero">
+  <!-- Docked title + menu (we'll move menu to lower-right via CSS) -->
+  <header class="dock" aria-label="Site header">
+    <h1 class="hero-title">Kevin de Souza</h1>
+    <nav class="hero-menu" aria-label="Primary links">
+      <a href="https://kevindesouza.substack.com" target="_blank" rel="noopener">Substack</a>
+      <a href="https://www.linkedin.com/in/kevin-de-souza-558856127" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/loosebroose" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <!-- HERO = Slide 1 -->
+  <section class="hero snap" aria-label="Homepage hero" style="--img: url('/images/ski.jpg');">
     <div class="hero-overlay" aria-hidden="true"></div>
-
-    <div class="hero-content fade-on-scroll">
-      <h1 class="hero-title">Kevin de Souza</h1>
-
-      <nav class="hero-menu" aria-label="Primary links">
-        <a href="https://kevindesouza.substack.com" target="_blank" rel="noopener">Substack</a>
-        <a href="https://www.linkedin.com/in/kevin-de-souza-558856127" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/loosebroose" target="_blank" rel="noopener">GitHub</a>
-      </nav>
-
-      <!-- <a class="scroll-hint" href="#gallery" aria-label="Scroll to photo gallery">
-        Scroll ↓
-      </a> -->
-    </div>
   </section>
 
-  <!-- PHOTO STORY -->
-  <main id="gallery" class="story" aria-label="Photo gallery">
-    <section class="story-slide snap fade-on-scroll" style="--img: url('/images/saladita_sunset.JPEG');">
+  <!-- Slides (no captions) -->
+  <section class="story" aria-label="Photo gallery">
+    <section class="story-slide snap" style="--img: url('/images/saladita_sunset.JPEG');">
       <div class="story-overlay" aria-hidden="true"></div>
-      <div class="story-caption">
-        <h2>Saladita Sunset</h2>
-        <p>Pacifico + the last light.</p>
-      </div>
     </section>
 
-    <section class="story-slide snap fade-on-scroll" style="--img: url('/images/jump.JPEG');">
+    <section class="story-slide snap" style="--img: url('/images/jump.JPEG');">
       <div class="story-overlay" aria-hidden="true"></div>
-      <div class="story-caption">
-        <h2>Jumpin'</h2>
-        <p>Grassy mountain hops.</p>
-      </div>
     </section>
 
-    <section class="story-slide snap fade-on-scroll" style="--img: url('/images/stella.JPEG');">
+    <section class="story-slide snap" style="--img: url('/images/stella.JPEG');">
       <div class="story-overlay" aria-hidden="true"></div>
-      <div class="story-caption">
-        <h2>Stella Vista</h2>
-        <p>A dog in Pictou.</p>
-      </div>
     </section>
+  </section>
 
-
-  </main>
-
-  <script src="/scripts/main.js?v=11" defer></script>
+  <script src="/scripts/scroll-photos.js?v=11" defer></script>
 </body>
 </html>
