@@ -1,190 +1,238 @@
 
 /* ============================
-   FULL-BLEED HERO (Concept A)
+   Global
    ============================ */
+:root {
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.82);
 
-* {
-  box-sizing: border-box;
+  --overlayTop: rgba(0,0,0,0.20);
+  --overlayMid: rgba(0,0,0,0.22);
+  --overlayBot: rgba(0,0,0,0.62);
+
+  --pillBg: rgba(0,0,0,0.45);
+  --pillBorder: rgba(255,255,255,0.16);
+
+  --shadow: 0 14px 40px rgba(0,0,0,0.22);
+  --radius: 18px;
+  --pill: 999px;
 }
 
-html,
-body {
-  margin: 0;
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  /* Scroll snapping across the whole page */
+  scroll-snap-type: y mandatory;
 }
 
 body {
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: #000;
-  color: #fff;
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hero: edge-to-edge image */
+/* Each full-screen section snaps */
+.snap {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* ============================
+   Hero
+   ============================ */
 .hero {
   position: relative;
-  height: 100vh;
   width: 100%;
-
   display: flex;
   justify-content: center;
   text-align: center;
 
-   align-items: flex-end;
-   padding-bottom: clamp(70px, 12vh, 140px);
+  /* Option B: content sits in lower-third */
+  align-items: flex-end;
+  padding: 0 clamp(16px, 4vw, 34px) clamp(70px, 12vh, 140px);
 
-  background: url("../images/ski.jpg") no-repeat center center / cover;
+  background: url("/images/ski.jpg") no-repeat center / cover;
 }
 
-/* Clean, subtle darkening for readability */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.35),
-    rgba(0, 0, 0, 0.25)
+    var(--overlayTop),
+    var(--overlayMid) 45%,
+    var(--overlayBot)
   );
 }
 
-/* Centered content */
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 900px;
-  padding: 20px;
+  width: min(980px, 100%);
+  padding: clamp(14px, 2.4vw, 22px);
 }
 
-/* Small overline */
-.hero-label {
-  margin: 0 0 10px;
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.85;
-}
-
-/* Editorial hero text (not huge, not tiny) */
 .hero-title {
-  margin: 0 0 28px;
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  margin: 0 0 18px;
+  font-size: clamp(2.0rem, 4.4vw, 3.6rem);
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 720;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
-/* Bottom pill menu */
 .hero-menu {
   display: inline-flex;
-  gap: 24px;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  padding: 14px 28px;
-  background: rgba(0, 0, 0, 0.45);
+  padding: 12px 18px;
+  border-radius: var(--pill);
+  background: var(--pillBg);
+  border: 1px solid var(--pillBorder);
   backdrop-filter: blur(12px);
-
-  border-radius: 999px;
+  box-shadow: var(--shadow);
 }
 
 .hero-menu a {
   color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
-  opacity: 0.9;
-  transition: opacity 0.15s ease;
+  opacity: 0.92;
+  padding: 10px 12px;
+  border-radius: var(--pill);
+  transition: opacity 160ms ease, background 160ms ease, transform 160ms ease;
 }
 
 .hero-menu a:hover {
   opacity: 1;
+  background: rgba(255,255,255,0.10);
+  transform: translateY(-1px);
 }
 
-/* Mobile tweaks */
-@media (max-width: 500px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-menu {
-    gap: 16px;
-    padding: 12px 20px;
-  }
+.hero-menu a:focus-visible,
+.scroll-hint:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.45);
+  outline-offset: 3px;
 }
 
+.scroll-hint {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 160ms ease;
+}
+
+.scroll-hint:hover { opacity: 1; }
 
 /* ============================
-   Scroll-snap Photo Story
+   Story (full-screen slides)
    ============================ */
-
-.story{
-  height: 100vh;
-  overflow-y: auto;
-
-  /* snap behavior */
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-
-  /* nice on iOS */
-  -webkit-overflow-scrolling: touch;
-
-  /* optional: remove scroll chaining */
-  overscroll-behavior: contain;
+.story {
+  width: 100%;
 }
 
-/* each slide fills the screen */
-.story-slide{
+/* Each slide is a full-bleed background image */
+.story-slide {
   position: relative;
-  height: 100vh;
   width: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  display: flex;
+  align-items: flex-end;
 
-  /* background image via CSS variable */
+  padding: clamp(18px, 5vw, 56px);
   background: var(--img) no-repeat center / cover;
 }
 
-/* readability gradient */
-.story-slide::before{
-  content:"";
-  position:absolute;
-  inset:0;
+/* Separate overlay element (clean + easy to tweak) */
+.story-overlay {
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.15),
-    rgba(0,0,0,0.20) 55%,
-    rgba(0,0,0,0.65)
+    rgba(0,0,0,0.12),
+    rgba(0,0,0,0.18) 55%,
+    rgba(0,0,0,0.68)
   );
 }
 
-/* caption positioning */
-.story-caption{
-  position: absolute;
-  left: clamp(16px, 4vw, 56px);
-  bottom: clamp(22px, 7vh, 70px);
+/* Caption sits above overlay */
+.story-caption {
+  position: relative;
   z-index: 1;
+  max-width: min(720px, 92vw);
 
-  max-width: min(640px, 92vw);
-  color: #fff;
+  padding: 14px 16px;
+  border-radius: 14px;
+
+  background: rgba(0,0,0,0.32);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
 }
 
-.story-caption h2{
-  margin: 0 0 8px;
-  font-size: clamp(1.4rem, 2.6vw, 2.0rem);
+.story-caption h2 {
+  margin: 0 0 6px;
+  font-size: clamp(1.25rem, 2.4vw, 2.0rem);
   line-height: 1.15;
   letter-spacing: -0.01em;
 }
 
-.story-caption p{
+.story-caption p {
   margin: 0;
-  opacity: 0.88;
-  font-size: clamp(1rem, 1.6vw, 1.1rem);
+  color: var(--muted);
+  font-size: clamp(1.0rem, 1.5vw, 1.1rem);
   line-height: 1.55;
 }
 
-/* optional: subtle divider between hero and story */
-.hero + .story{
-  border-top: 1px solid rgba(255,255,255,0.10);
+/* ============================
+   Fade + Slide animations (scroll-driven via JS)
+   ============================ */
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 700ms ease, transform 700ms ease;
+  will-change: opacity, transform;
 }
 
-/* prefer reduced motion */
-@media (prefers-reduced-motion: reduce){
-  .story{ scroll-behavior: auto; }
+/* When active */
+.fade-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Slightly different feel for slides: gentle zoom-in */
+.story-slide.fade-on-scroll {
+  transform: scale(0.985);
+  transition: opacity 700ms ease, transform 900ms ease;
+}
+
+.story-slide.fade-on-scroll.is-visible {
+  transform: scale(1);
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px) {
+  .hero-menu { gap: 12px; }
+  .hero-menu a { font-size: 0.92rem; padding: 10px 10px; }
+  .story-caption { padding: 12px 14px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
