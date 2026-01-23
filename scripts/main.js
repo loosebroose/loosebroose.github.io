@@ -1,23 +1,26 @@
 
-// Fade slides based on how much of each slide is visible
-const slides = document.querySelectorAll(".story-slide");
+document.addEventListener("DOMContentLoaded", () => {
+  const els = document.querySelectorAll(".fade-on-scroll");
 
-const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+  const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    for (const entry of entries) {
-      // intersectionRatio = 0..1
-      // Map to opacity range (feel free to tweak)
-      const opacity = clamp(0.15 + entry.intersectionRatio * 0.85, 0.15, 1);
-      entry.target.style.opacity = opacity.toFixed(3);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        const el = entry.target;
+
+        // Different minimum opacity for hero vs slides
+        const isHero = el.classList.contains("hero-content");
+        const minOpacity = isHero ? 0 : 0.15; // hero can fade to 0, slides to 0.15
+
+        const opacity = clamp(minOpacity + entry.intersectionRatio * (1 - minOpacity), minOpacity, 1);
+        el.style.opacity = opacity.toFixed(3);
+      }
+    },
+    {
+      threshold: Array.from({ length: 101 }, (_, i) => i / 100),
     }
-  },
-  {
-    // Lots of thresholds = smoother fading
-    threshold: Array.from({ length: 101 }, (_, i) => i / 100),
-  }
-);
+  );
 
-slides.forEach((s) => observer.observe(s));
-``
+  els.forEach((el) => observer.observe(el));
+});
