@@ -15,39 +15,26 @@ layout: null
 
 <body>
   <!-- HERO (snap section 1) -->
-  <header class="dock" aria-label="Site header">
-    <h1 class="hero-title">Kevin de Souza</h1>
-    
-    <nav class="hero-menu" aria-label="Primary links">
-          <a href="https://kevindesouza.substack.com" target="_blank" rel="noopener">Substack</a>
-          <a href="https://www.linkedin.com/in/kevin-de-souza-558856127" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/loosebroose" target="_blank" rel="noopener">GitHub</a>
-    </nav>
-  </header>
-    <!-- HERO (photo display)-->
-  <section class="hero" aria-label="Homepage hero">
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-photo" aria-hidden="true"></div>
-    </section>
+  <section class="hero snap" aria-label="Homepage hero">
+    <div class="hero-overlay" aria-hidden="true"></div>
 
-  <!-- SCROLL DRIVER: each step = one photo -->
-  <section class="story">
-    <section class="story-slide snap" style="--img:url('images/saladita_sunset.JPEG')">
-      <div class="story-overlay"></div>
-    </section>
-    
-    <section class="story-slide snap" style="--img:url('images/jump.JPEG')">
-      <div class="story-overlay"></div>
-    </section>
+    <div class="hero-content fade-on-scroll">
+      <h1 class="hero-title">Kevin de Souza</h1>
 
-    <section class="story-slide snap" style="--img:url('/images/stella.JPEG')">
-      <div class="story-overlay"></div>
+      <nav class="hero-menu" aria-label="Primary links">
+        <a href="https://kevindesouza.substack.com" target="_blank" rel="noopener">Substack</a>
+        <a href="https://www.linkedin.com/in/kevin-de-souza-558856127" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/loosebroose" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+
+      <!-- <a class="scroll-hint" href="#gallery" aria-label="Scroll to photo gallery">
+        Scroll ↓
+      </a> -->
+    </div>
   </section>
-  
-   
-  
-  
-  <!-- <main id="gallery" class="story" aria-label="Photo gallery">
+
+  <!-- PHOTO STORY -->
+  <main id="gallery" class="story" aria-label="Photo gallery">
     <section class="story-slide snap fade-on-scroll" style="--img: url('/images/saladita_sunset.JPEG');">
       <div class="story-overlay" aria-hidden="true"></div>
       <div class="story-caption">
@@ -73,8 +60,8 @@ layout: null
     </section>
 
 
-  </main> -->
+  </main>
 
-  <script src="/scripts/scroll-photos.js?v=11" defer></script>
+  <script src="/scripts/main.js?v=11" defer></script>
 </body>
 </html>
