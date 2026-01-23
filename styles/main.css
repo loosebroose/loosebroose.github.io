@@ -55,7 +55,8 @@ body {
   justify-content: center;
   align-items: flex-end;
 
-  padding: 0 clamp(16px, 4vw, 34px) clamp(70px, 12vh, 140px);
+  padding-top: 72px; 
+  padding: 72px clamp(16px, 4vw, 34px) clamp(70px, 12vh, 140px);
   background: url("/images/ski.jpg") no-repeat center / cover;
 }
 
@@ -156,6 +157,9 @@ body {
   /* baseline dim */
   opacity: 0.15;
   transition: opacity 200ms linear;
+
+   scroll-snap-align: start;
+   scroll-snap-stop: always;
 }
 
 .story-overlay {
@@ -222,4 +226,38 @@ body {
     opacity: 1 !important;
     transition: none !important;
   }
+}
+
+
+
+/*============================== 
+Docked header
+===============================*/
+.dock {
+   position: stivky;
+   top: 0;
+   z-index: 100;
+
+   display: flex;
+   align-items: baseline;
+   justify-content: space-between;
+   gap: 16px;
+
+   padding: 16px clamp(16px. 4vw, 34px);
+
+   background: rgba(0,0,0,0,55);
+   backdrop-filter: bluer(12px);
+
+   border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.dock .hero-title {
+   margin: 0;
+}
+
+/* reuse existing menu styles but make it fit the dock */
+.dock .hero-menu {
+   margin: 0;
+   box-shadow: none
+   
 }
