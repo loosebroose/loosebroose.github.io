@@ -70,9 +70,9 @@ body::-webkit-scrollbar {
 
 /* If the title still lives in the dock, hide it (optional).
    Remove this if you want the title visible somewhere. */
-.dock .hero-title {
+/* .dock .hero-title {
   display: none;
-}
+} */
 
 /* Keep your pill menu styling, but pin it to bottom-right */
 .hero-menu {
